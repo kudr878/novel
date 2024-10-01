@@ -1,0 +1,12 @@
+.optionButton {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  text-align: left;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+}
+
+.optionButton:hover {
+  background-color: #d5d5d5;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teleportation Square</title>
+    <style>
+
+      #big-square {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        background-color: transparent; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #small-square {
+        width: 50px;
+        height: 50px;
+        background-color: #ff0000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="big-square"></div>
+    <div id="small-square"></div>
+    <script>
+      const bigSquare = document.getElementById('big-square');
+      const smallSquare = document.getElementById('small-square');
+
+      bigSquare.addEventListener('click', (event) => {
+        const onClickX = event.clientX;
+        const onClickY = event.clientY;
+        smallSquare.style.top = `${onClickY}px`;
+        smallSquare.style.left = `${onClickX}px`;
+      });
+    </script>
+  </body>
+</html>
